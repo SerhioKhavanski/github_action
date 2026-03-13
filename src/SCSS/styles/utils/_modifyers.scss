@@ -1,0 +1,39 @@
+.auth__form--sign-in{
+    z-index: 2;
+    transition: all 500ms ease-in-out;
+}
+.auth__form--sign-up{
+    z-index: 1;
+    transition: all 500ms ease-in-out;
+}
+.auth__panel--sign-in{
+    left: -50%;
+}
+
+
+
+
+.auth--active{
+    .auth__mask{
+        transform: translate(-100%);
+
+        border-radius:  32px 100px 100px 32px; 
+    }
+    .auth__panel--sign-up{
+        transform: translate(100%);
+    }
+    .auth__panel--sign-in{
+        transform: translate(200%);
+    }
+    .auth--sign-in,.auth--sign-up{
+        transform: translateX(100%);
+    }
+    .auth--sign-in{
+        z-index: 1;
+    }
+    .auth--sign-up{
+        z-index: 2;
+    }
+
+}
+

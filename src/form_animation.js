@@ -3,10 +3,10 @@ const signUp = document.getElementById("signUp");
 const container = document.querySelector(".container");
 
 signUp.addEventListener('click', () =>{
-    container.classList.add("active");
+    container.classList.add("auth--active");
 });
 signIn.addEventListener('click', () =>{
-    container.classList.remove("active");
+    container.classList.remove("auth--active");
 });
 
 

@@ -8,104 +8,115 @@
   </head>
   <body>
 
-    <section class="container">
+    <section class="container auth">
 
-      <div class="formContainer sign-in">
+      <div class="auth__form auth__form--sign-in">
 
-         <form action="" class="form">
-                <h2>Sign In</h2>
-                <div class="form__links">
+         <form aria-labelledby="formHeadingSignIn" action="">
+          <h2 id="formHeadingSignIn" >Sign In</h2>
+          <ul class="auth__links">
+            <li>
+              <a aria-label="Sign in with Google" class="auth__link" href="#">
+                <svg>
+                  <use href="./sprite.svg#google"></use>
+                </svg>
+              </a>
+            </li>
 
-                  <a href="#">
-                    <div class="form__link">
-                      <svg>
-                        <use href="./sprite.svg#google"></use>
-                      </svg>
-                    </div>
-                    </a>
-                    <a href="#">
-                      <div class="form__link">
-                        <svg>
-                          <use href="./sprite.svg#facebook"></use>
-                        </svg>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div class="form__link">
-                        <svg>
-                          <use href="./sprite.svg#github"></use>
-                        </svg>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div class="form__link">
-                        <svg>
-                          <use href="./sprite.svg#linkedIn"></use>
-                        </svg>
-                      </div>
-                    </a>
-                </div>
-                <input class="input" type="email" id="email-sign-in" placeholder="Email">
-                <input class="input" type="password" id="password-sign-in" placeholder="Password">
-                <a href="#">Forget Your Password?</a>
-                <button class="btn" type="submit" id="enter-sign-in">SIGN IN</button>
-          </form>
+            <li>
+              <a aria-label="Sign in with Facebook" class="auth__link" href="#">
+                <svg>
+                  <use href="./sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a aria-label="Sign in with Github" class="auth__link" href="#">
+                <svg>
+                  <use href="./sprite.svg#github"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a aria-label="Sign in with LinkedIn" class="auth__link" href="#">
+                <svg>
+                  <use href="./sprite.svg#linkedIn"></use>
+                </svg>
+              </a>
+            </li>
+
+          </ul>
+          <label for="emailSignIn">Email</label>
+          <input class="input auth__input" name="userEmailSignIn" type="email" id="emailSignIn" placeholder="Email" required>
+          <label for="passwordSignIn">Password</label>
+          <input class="input auth__input" name="userPasswordSignIn" type="password" id="passwordSignIn" placeholder="Password" required>
+          <a href="#">Forget Your Password?</a>
+          <button class="btn auth__btn" type="submit" id="enterSignIn">SIGN IN</button>
+        </form>
       </div>
        
-      <div class="formContainer sign-up">
-        <form action="" class="form">
-            <h2>Sign up</h2>
-            <div class="form__links">
+      <div class="auth__form auth__form--sign-up">
+        <form aria-labelledby="formHeadingSignUp" action="">
+          <h2 id="formHeadingSignUp">Sign up</h2>
+          <ul class="auth__links">
+                <li>
+                  <a aria-label="Sign up with Google" class="auth__link" href="#">
+                    <svg>
+                      <use href="./sprite.svg#google"></use>
+                    </svg>
+                  </a>
+                </li>
 
-              <a href="#">
-                <div class="form__link">
-                  <svg>
-                    <use href="./sprite.svg#google"></use>
-                  </svg>
-                </div>
-                </a>
-                <a href="#">
-                  <div class="form__link">
+                <li>
+                  <a aria-label="Sign up with Facebook" class="auth__link" href="#">
                     <svg>
                       <use href="./sprite.svg#facebook"></use>
                     </svg>
-                  </div>
-                </a>
-                <a href="#">
-                  <div class="form__link">
+                  </a>
+                </li>
+
+                <li>
+                  <a aria-label="Sign up with Github" class="auth__link" href="#">
                     <svg>
                       <use href="./sprite.svg#github"></use>
                     </svg>
-                  </div>
-                </a>
-                <a href="#">
-                  <div class="form__link">
+                  </a>
+                </li>
+
+                <li>
+                  <a aria-label="Sign up with LinkedIn" class="auth__link" href="#">
                     <svg>
                       <use href="./sprite.svg#linkedIn"></use>
                     </svg>
-                  </div>
-                </a>
-            </div>
-            <input class="input" type="text" id="name-sign-up" placeholder="Name">
-            <input class="input" type="email" id="email-sign-up" placeholder="Email">
-            <input class="input" type="password" id="password-sign-up" placeholder="Password">
-            <button class="btn" type="submit" id="enter">SIGN UP</button>
+                  </a>
+                </li>
+
+          </ul>
+          <label for="nameSignUp">Name</label>
+          <input class="input auth__input" name="userNameSignUp" type="text" id="nameSignUp" placeholder="Name" required>
+          <label for="emailSignUp">Email</label>
+          <input class="input auth__input" name="userEmailSignUp" type="email" id="emailSignUp" placeholder="Email" required>
+          <label for="passwordSignUp">Password</label>
+          <input class="input auth__input" name="userPasswordSignUp" type="password" id="passwordSignUp" placeholder="Password" required>
+          <button class="btn auth__btn" type="submit" id="enter">SIGN UP</button>
         </form>
       </div>  
 
-      <div class="overlay-mask">
-        <div class="overlay">
-            <div class="overlay__greetings">
-              <h2>Welcome Back</h2>
-              <p>Enter your personal details to use all of site features</p>
-              <button class="btn secondary" type="button" id="signIn">SIGN IN</button>
-            </div>
+      <div class="auth__mask">
+        <div class="auth__overlay">
+          <div aria-labelledby="panelSigninDescription" class="auth__panel auth__panel--sign-in">
+            <h2 id="panelSigninDescription" >Welcome Back</h2>
+            <p> Enter your personal details to use all of site features</p>
+            <button class="btn auth__btn secondary" type="button" id="signIn">SIGN IN</button>
+          </div>
 
-            <div class="overlay__register">
-              <h2>Hello, Friend!</h2>
-              <p>Register with your personal details to use all of site features</p>
-              <button class="btn secondary" type="button" id="signUp">SIGN UP</button>
-            </div>
+          <div aria-labelledby="panelSignupDescription" class="auth__panel auth__panel--sign-up">
+            <h2 id="panelSignupDescription">Hello, Friend!</h2>
+            <p >Register with your personal details to use all of site features</p>
+            <button class="btn auth__btn secondary" type="button" id="signUp">SIGN UP</button>
+          </div>
         </div>
       </div>
     </section>
