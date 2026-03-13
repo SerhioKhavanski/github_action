@@ -1,0 +1,23 @@
+@use"../tokens/" as t;
+.container{
+    max-width: 800px;
+    width: 100%;
+    min-height: 480px;
+    margin: auto;
+    border-radius: t.getToken(radii,3xl);
+    background-color: t.getToken(form,formColorBG);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+.formContainer{
+  width: 50%;
+  padding: t.getToken(spasings,lg);
+  background-color: t.getToken(form,formColorBG);
+  position: absolute;
+  height: 100%;
+  display: flex;
+  
+}

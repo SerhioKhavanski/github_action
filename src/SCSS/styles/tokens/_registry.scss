@@ -1,0 +1,11 @@
+@use"./radii" as r;
+@use"./spacings" as s;
+@use"./colors" as c;
+
+$TOKENS:(
+  radii:r.$radii,
+  spasings:s.$spacings,
+  themeColors:c.$themeColors,
+  btn:c.$btnColor,
+  form:c.$formColors
+);

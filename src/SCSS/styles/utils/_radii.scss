@@ -1,0 +1,7 @@
+@use "../tokens/" as t;
+
+@each $key, $value in t.$radii{
+    .r-#{$key}{
+        border-radius: #{$value};
+    }
+}

@@ -1,0 +1,13 @@
+@use "../tokens/" as t;
+.btn{
+    font-weight: 700;
+    color: t.getToken(btn,btnColorText);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: t.getToken(btn,btnColorBG);
+}
+.secondary{
+    background-color: transparent;
+    border: 2px solid t.getToken(btn,btnColorText);
+}

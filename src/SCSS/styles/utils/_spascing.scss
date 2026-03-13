@@ -1,0 +1,20 @@
+@use "../tokens/" as t;
+
+$spacingsNames:(
+    p: "padding",
+    px: "padding-inline",
+    py: "padding-block",
+    m: "margin",
+    mx: "margin-inline",
+    my: "margin-block",
+    gap: "gap"
+);
+
+@each $spaceName, $spaceNameValue in $spacingsNames{
+    @each $sizeName, $sizeNameValue in t.$spacings{
+        .#{$spaceName}-#{$sizeName}{
+            #{$spaceNameValue}:#{$sizeNameValue};
+        }
+    }
+}
+

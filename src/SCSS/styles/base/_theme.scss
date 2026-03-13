@@ -1,0 +1,7 @@
+@use "../tokens" as t;
+
+body{
+    background:linear-gradient(90deg, t.getToken(themeColors,themeColorsBG1), t.getToken(themeColors,themeColorsBG2)) ;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,111 @@
+@use"../tokens/" as t;
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: t.getToken(spasings,md) ;
+
+    a {
+        display: block;
+        text-decoration: none;
+        color: t.getToken(themeColors,themeColorLink);
+    }
+
+    &__links{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    &__link{
+        border: 1px solid rgb(160, 160, 160);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            color: rgb(35, 35, 35);
+        }
+    }
+}
+.overlay-mask{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    overflow: hidden;
+    border-radius: 100px 32px 32px 100px; 
+    transition: 500ms all ease;
+        z-index: 3;
+}
+.overlay{
+    width: 200%;
+    height: 100%;
+    background:linear-gradient(90deg,t.getToken(form,formColorOverlay2),t.getToken(form,formColorOverlay1)) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    top: 0;
+    left: -100%;
+    
+    
+    transition: all 500ms ease-in-out;
+
+    &__greetings,
+    &__register{
+    padding: t.getToken(spasings,lg);
+    color: t.getToken(form,formColorGreetingsText);  
+    text-align: center; 
+    z-index: 3;
+    position: absolute;
+    width: 50%;
+    right: 0;
+    transition: all 400ms ease-in-out;
+    }
+
+    &__greetings{
+        left: -50%;
+    }
+}
+
+.sign-in{
+    z-index: 2;
+    transition: all 500ms ease-in-out;
+}
+.sign-up{
+    z-index: 1;
+    transition: all 500ms ease-in-out;
+}
+
+.active{
+    .overlay-mask{
+        transform: translate(-100%);
+
+        border-radius:  32px 100px 100px 32px; 
+    }
+    .overlay__register{
+        transform: translate(100%);
+    }
+    .overlay__greetings{
+        transform: translate(200%);
+    }
+    .sign-in,.sign-up{
+        transform: translateX(100%);
+    }
+    .sign-in{
+        z-index: 1;
+    }
+    .sign-up{
+        z-index: 2;
+    }
+
+}
