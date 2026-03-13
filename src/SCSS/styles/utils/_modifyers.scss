@@ -25,13 +25,13 @@
     .auth__panel--sign-in{
         transform: translate(200%);
     }
-    .auth--sign-in,.auth--sign-up{
+    .auth__form--sign-in,.auth__form--sign-up{
         transform: translateX(100%);
     }
-    .auth--sign-in{
+    .auth__form--sign-in{
         z-index: 1;
     }
-    .auth--sign-up{
+    .auth__form--sign-up{
         z-index: 2;
     }
 
